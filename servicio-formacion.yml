@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${random.value}:${spring.application.name}
+servicio-cursos:
+  api:
+    url: http://servicio-cursos/
+spring:
+  application:
+    name: servicio-formacion
+server:
+  port: '8085'
+springdoc:
+  packagesToScan: com.curso.servicioformacion.controller
+  pathsToMatch: /**
